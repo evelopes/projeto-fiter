@@ -1,0 +1,13 @@
+.bola {
+  width: 30px;
+  height: 30px;
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+  color: #FFF;
+  line-height: 30px;
+  margin: 0 10px 10px 0;
+  background-color: #EA8E41;
+}

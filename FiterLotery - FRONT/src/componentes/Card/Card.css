@@ -1,0 +1,40 @@
+.Card {
+    background-color: #191B3D;
+    width: 223px;
+    height: 115px;
+    margin: 0 10px;
+    color: white;
+    border-radius: 8px;
+}
+
+.dadosCard {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.firstLine {
+    display: flex;
+    justify-content: space-between;
+    margin: 5px 25px;
+
+}
+
+.cardTitulo {
+    font: 700 normal 16px 'Roboto';
+    line-height: 18px;
+    text-transform: uppercase;
+    color: #a7aacd;
+}
+
+
+.lastLine {
+
+    font-family: Roboto;
+    font-size: 24px;
+    font-weight: 700;
+    line-height: 28px;
+    letter-spacing: 0em;
+
+}

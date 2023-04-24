@@ -1,0 +1,10 @@
+- models/
+  - tickets.js
+  - sorteio.js
+  - user.js
+- routes/
+  - ticketsRoutes.js
+  - sorteioRoutes.js
+  - userRoutes.js
+  - compareRoutes.js
+  .env

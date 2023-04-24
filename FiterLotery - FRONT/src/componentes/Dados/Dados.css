@@ -1,0 +1,72 @@
+.Dados, .DadosResultados {
+    background-color: #191B3D;
+    max-width: 100%;
+    color: white;
+    border-radius: 8px;
+    margin: 27px 64px;
+}
+
+
+.TicketsDados {
+    display: flex;
+    justify-content: flex-start;
+    margin: 37px 0 0 17px;
+}
+
+.TicketsCompra {
+    display: flex;
+    justify-content: center;
+}
+
+
+p.dados {
+    color: white;
+    font: 700 normal 16px 'Roboto';
+
+}
+
+.menu {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    height: 46 px;
+    padding: 18px 0 0 27px;
+    border-bottom: 2px solid #212144;
+}
+
+.bilhetes {
+    display: flex;
+    align-items: flex-start;
+    font: 700 14px 'Roboto', sans-serif;
+    text-transform: uppercase;
+    color: #A7AACD;
+}
+
+.bilhetes:hover {
+    color: #177FE9;
+}
+
+.bilhetes+.bilhetes {
+    margin-left: 20px;
+}
+
+
+.total {
+    display: flex;
+    justify-content: flex-start;
+    margin: 27px 64px;
+}
+
+.informacoes {
+    display: flex;
+    justify-content: center;
+    padding: 25px;
+    font-family: 'Roboto';
+    font-style: normal;
+    font-weight: 700;
+    font-size: 12px;
+    line-height: 14px;
+    text-transform: uppercase;
+
+    color: #707293;
+}

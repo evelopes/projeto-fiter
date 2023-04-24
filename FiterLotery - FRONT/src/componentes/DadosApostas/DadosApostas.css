@@ -1,0 +1,53 @@
+.TituloTabela,
+.itensTabela {
+  display: flex;
+  width: 100%;
+  height: 100%;
+  align-items: flex-start;
+  justify-content: space-between;
+  margin: 5px 15px;
+  font: 700 12px 'Roboto';
+  text-transform: uppercase;
+  color: #707293;
+}
+
+.numerosTicket {
+  width: 70%;
+  height: 20px;
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  margin: 5px 0;
+
+}
+
+
+.sorteadas {
+  width: 30px;
+  height: 30px;
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+  color: #FFF;
+  line-height: 30px;
+  margin: 0 10px 10px 0;
+}
+
+
+.azulClaro {
+  background-color: #35CAD0;
+}
+
+.bilhetesPremiados {
+  font-family: 'Roboto';
+  font-style: normal;
+  font-weight: 700;
+  font-size: 18px;
+  line-height: 21px;
+  color: #EA8E41;
+  margin: 0 30px;
+  text-transform: uppercase;
+
+}

@@ -1,0 +1,89 @@
+.Ticket {
+    margin: 0 10px 17px;
+    padding: 0;
+    max-width: 250px;
+    min-height: 285px;
+    border: solid 1px #177FE9;
+    display: flex;
+    align-items: flex-start;
+    flex-direction: column;
+
+}
+
+.head {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    width: 100%;
+    height: 37px;
+    border-bottom: 1px dashed #177FE9;
+}
+
+.tituloTicket {
+    font: 700 12px 'Roboto', sans-serif;
+    color: #A7AACD;
+    text-transform: uppercase;
+
+}
+
+
+.numeros {
+    font: 700 10px 'Roboto', sans-serif;
+    margin: 15px 0 0 30px;
+
+
+}
+
+.escolhidas {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    margin: 10px;
+
+}
+
+
+
+.novoTicket {
+    background-color: transparent;
+    min-width: 250px;
+    min-height: 285px;
+    border: 2px dashed #EA8E41;
+    margin: 0 10px 17px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    font: 700 18px/21px Roboto;
+    text-align: left;
+    letter-spacing: 0em;
+    color: #EA8E41;
+
+}
+
+.TicketsCompras {
+    display: flex;
+    justify-content: center;
+    padding: 0 0 15px;
+    width: 100%;
+}
+
+.comprarTickets {
+    background-color: #2C3CCB;
+    color: white;
+    width: 259px;
+    height: 65px;
+    border-radius: 8px;
+    padding: 2px;
+    border: none;
+    font: 700 18px Roboto;
+    text-align: left;
+    letter-spacing: 0em;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+
+
+@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');

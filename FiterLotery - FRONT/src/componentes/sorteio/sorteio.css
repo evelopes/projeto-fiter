@@ -1,0 +1,58 @@
+.sorteio {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.boxSorteio {
+
+    display: flex;
+    width: 100%;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    max-width: 997px;
+    border: 3px dashed #EA8E41;
+    filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25));
+    margin: 65px 0 0;
+    padding: 15px;
+
+}
+
+.bolasSorteadas {
+    display: flex;
+    margin: 5px;
+}
+
+.buttonSortear {
+    background-color: #EA8E41;
+    color: white;
+    width: 205px;
+    height: 47px;
+    border-radius: 8px;
+    padding: 2px;
+    border: none;
+    font: 700 18px/21px Roboto;
+    text-align: left;
+    letter-spacing: 0em;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+
+.bilheteSorteio {
+    font-family: 'Roboto';
+    font-style: normal;
+    font-weight: 700;
+    font-size: 18px;
+    line-height: 21px;
+
+    text-align: center;
+    text-transform: uppercase;
+    margin: 5px;
+
+
+    color: #EA8E41;
+}
