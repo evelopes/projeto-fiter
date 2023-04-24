@@ -11,6 +11,9 @@ function Dados(props) {
     const [statusCompra, setStatusCompra] = useState();
     const [bolasSelecionadasPorTicket, setBolasSelecionadasPorTicket] = useState({});
 
+    console.log(bolasSelecionadasPorTicket)
+
+
     const handleBolasSelecionadasChange = (bolasSelecionadas, numeroTicket) => {
         setBolasSelecionadasPorTicket((prevState) => ({
             ...prevState,
@@ -56,7 +59,6 @@ function Dados(props) {
     }, [valorTotal, numeroTicket]);
     
     
-    const dadosTicket =  [1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16] ;
     const comprarTickets = async () => {
         try {
             const response = await fetch('http://localhost:3001/user/Eve/saldo/retirar', {
@@ -73,24 +75,25 @@ function Dados(props) {
             const responseBody = await response.text();
            setStatusCompra(responseBody.status)
            console.log('cheguei aqui')
-           await gerarTickets(dadosTicket);
-           console.log('final')
+           await gerarTickets();            
+           console.log('final' + numeroTicket)
         } catch (error) {
             console.error(error);
         }
     }
 
 
-    async function gerarTickets(selected) {
+    async function gerarTickets() {   
         
-        const objeto = {selectedNumbers :  selected};
-        console.log("objeto")
-        console.log(objeto)
+        for (let index = 1; index <= numeroTicket; index++) {                  
+          let objeto = {selectedNumbers :  bolasSelecionadasPorTicket[index]};
+            console.log("objeto")
+            console.log(objeto)
             try {
                 console.log("entrei no try")
                 const response = await fetch('http://localhost:3001/tickets', {
                     method: 'POST',
-                   // mode: 'no-cors',
+                    // mode: 'no-cors',
                     headers: {
                         'Content-Type': 'application/json'
                     },
@@ -102,9 +105,10 @@ function Dados(props) {
             } catch (error) {
                 console.error(error);
             }
-    
-    }
-
+            
+        }
+        }
+        
 
 
 

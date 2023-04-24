@@ -55,7 +55,7 @@ router.post('/', async (req, res) => {
         console.log(ticket.date)
         console.log(ticket.ticketId)
         
-        await Ticket.create(ticket)
+        await Ticket.create([ticket])
         res.status(201).json({ message: "Ticket criado com sucesso!" })
     } catch (err) {
         console.log(err)
