@@ -1,14 +1,14 @@
-Clone o repositório:
-
+Abra a pasta onde queira copiar o repositório, abra seu terminal, e execute o seguinte comando:
 git clone https://github.com/evelopes/projeto-fiter
 Isso fará o download de todos os arquivos do projeto para sua máquina.
 
-Acesse a pasta "back" do projeto:
+Acesse a pasta 'projeto-fiter\' com projeto completo.
 
-cd FiterLotery BACK
-Certifique-se de estar na pasta "back" para executar os comandos a seguir.
+Com o comando 'cd FiterLotery BACK' acesse a pasta do servidor.
 
-No terminal, execute os seguintes comandos:
+Certifique-se de estar na pasta para executar os comandos a seguir:
+
+No terminal, execute os comandos:
 
 npm install
 npm run start
@@ -20,9 +20,9 @@ Abra um novo terminal e acesse a pasta raiz do projeto:
 cd FiterLotery - FRONT
 Novamente, execute os seguintes comandos:
 
-
 npm install
 npm run start
+
 O comando npm install instalará todas as dependências necessárias para rodar o React. Em seguida, o comando npm run start irá executar o React e abrir a aplicação no navegador.
 
 Na tela inicial da aplicação, os dados da página perfil e resultados ficarão na mesma tela. 

@@ -2,7 +2,7 @@ import '../DadosApostas/DadosApostas.css'
 import ItensTabela from './ItensTabela';
 import React, { useState, useEffect } from 'react';
 
-const DadosApostas = ({ dados }) => {
+const DadosApostas = ( dados) => {
   const [sorteio, setSorteio] = useState({})
   const [apostas, setApostas] = useState({})
   const [compare, setCompare] = useState({})

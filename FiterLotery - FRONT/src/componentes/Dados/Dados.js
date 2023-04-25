@@ -11,15 +11,6 @@ function Dados(props) {
     const [statusCompra, setStatusCompra] = useState();
     const [bolasSelecionadasPorTicket, setBolasSelecionadasPorTicket] = useState({});
 
-    console.log(bolasSelecionadasPorTicket)
-
-
-    const handleBolasSelecionadasChange = (bolasSelecionadas, numeroTicket) => {
-        setBolasSelecionadasPorTicket((prevState) => ({
-            ...prevState,
-            [numeroTicket]: bolasSelecionadas,
-        }));
-    };
 
     const onBolasSelecionadasChange = (bolasSelecionadas, numeroTicket) => {
         setBolasSelecionadasPorTicket(bolasSelecionadasPorTicket => ({ ...bolasSelecionadasPorTicket, [numeroTicket]: bolasSelecionadas }));
@@ -74,9 +65,7 @@ function Dados(props) {
             }
             const responseBody = await response.text();
            setStatusCompra(responseBody.status)
-           console.log('cheguei aqui')
            await gerarTickets();            
-           console.log('final' + numeroTicket)
         } catch (error) {
             console.error(error);
         }

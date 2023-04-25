@@ -14,22 +14,27 @@ const Resultados = () => {
       setNumeroTicket(numeroTicket)
     }
 
-
-
-
   const [dados, setDados] = React.useState(false);
   const handleSorteio = () => {
     setDados(true);
   }
 
+  const [data, setData] = React.useState('');
 
+  const childToParent = (childdata) => {
+    setData(childdata);
+  }
+
+
+
+  
 
   return (
     <>
     
-      <Topo nome='Resultados' numeroTicket={numeroTicket} onNumeroTicket={handleNumeroTicket} />
+      <Topo nome='Resultados' numeroTicket={numeroTicket} onNumeroTicket={handleNumeroTicket} novoSorteio={data}/>
       <div className="DadosResultados">
-        <Sorteio onSorteio={handleSorteio}/>
+        <Sorteio onSorteio={handleSorteio} childToParent={childToParent}/>
         <DadosResultados />
         <DadosApostas dados={dados}  />
         

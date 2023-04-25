@@ -15,7 +15,7 @@ function Topo(props) {
             }
         }
         fetchData();
-    }, [props.numeroTicket]);
+    }, [props.numeroTicket, props.novoSorteio]);
 
     return (
         <>

@@ -3,14 +3,19 @@ import BolaSorteio from '../BolaSorteio/BolaSorteio'
 import '../BolaSorteio/BolaSorteio.css'
 import './sorteio.css'
 
-const Sorteio = ({ onSorteio }) => {
+const Sorteio = ({ onSorteio, childToParent }) => {
   const [resultado, setResultado] = React.useState({});
   const [bolasSorteadas, setBolasSorteadas] = React.useState([]);
   const [novoSorteio, setNovoSorteio] = React.useState(false);
 
+
+
+
   React.useEffect(() => {
     pegarSorteio()
     setBolasSorteadas(resultado.winningNumbers || []);
+    onSorteio();
+    childToParent(resultado.winningNumbers)
   }, [novoSorteio]);
 
 
@@ -84,8 +89,8 @@ const Sorteio = ({ onSorteio }) => {
   async function sortearEHandleClick() {
     await enviarNovoSorteio();
     await pegarSorteio();
-    onSorteio();
     setNovoSorteio(!novoSorteio);
+    onSorteio();
     verificarResultados(resultado.betId)
   }
 
