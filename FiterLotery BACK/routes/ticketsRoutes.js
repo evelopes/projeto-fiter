@@ -9,7 +9,7 @@ router.get('/', async (req, res) => {
     try {
         const tickets = await Ticket.find()
         res.status(200).json(tickets)
-        
+
     } catch (err) {
         res.status(500).json({ error: err })
     }
@@ -34,27 +34,23 @@ router.get('/:id', async (req, res) => {
 
 router.post('/', async (req, res) => {
     try {
-
-        console.log("inicio ultimo ticket")
         const ultimoTicket = await Ticket.findOne().sort({ ticketId: -1 }).limit(1);
         let proximoTicketId = 1;
         if (ultimoTicket) {
             proximoTicketId = ultimoTicket.ticketId + 1;
         }
-        console.log("antes sorteio")
+
         const ultimoSorteio = await Sorteio.findOne().sort({ betId: -1 }).limit(1);
         let sorteioAtual = Number(ultimoSorteio.betId + 1);
-        
+
         const ticket = {
-            betId:  sorteioAtual,
+            betId: sorteioAtual,
             ticketId: proximoTicketId,
             selectedNumbers: req.body.selectedNumbers || selectedNumbers,
-            date:  req.body.date || now
+            date: req.body.date || now
         }
-        console.log(ticket.selectedNumbers)
-        console.log(ticket.date)
-        console.log(ticket.ticketId)
-        
+
+
         await Ticket.create([ticket])
         res.status(201).json({ message: "Ticket criado com sucesso!" })
     } catch (err) {

@@ -15,7 +15,6 @@ const Perfil = () => {
     setNumeroTicket(numeroTicket)
   }
 
-
   function atualizaSaldo(valor) {
     setNovoSaldo(valor)
   }

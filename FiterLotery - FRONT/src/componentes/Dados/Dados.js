@@ -84,16 +84,11 @@ function Dados(props) {
 
 
     async function gerarTickets() {   
-        
         for (let index = 1; index <= numeroTicket; index++) {                  
           let objeto = {selectedNumbers :  bolasSelecionadasPorTicket[index]};
-            console.log("objeto")
-            console.log(objeto)
             try {
-                console.log("entrei no try")
                 const response = await fetch('http://localhost:3001/tickets', {
                     method: 'POST',
-                    // mode: 'no-cors',
                     headers: {
                         'Content-Type': 'application/json'
                     },
@@ -101,7 +96,6 @@ function Dados(props) {
                 });
                 const data = await response.json();
                 console.log(data);
-                console.log("dados enviados");
             } catch (error) {
                 console.error(error);
             }

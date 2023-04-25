@@ -107,7 +107,7 @@ const DadosApostas = ({ dados }) => {
           <ItensTabela
             key={aposta.ticketId}
             Aposta={aposta.betId}
-            Preço={aposta.betValue}
+            Preço={aposta.betValue ? 'R$ ' + aposta.betValue : '' }
             Data={aposta.date ? formatarData(aposta.date) : ''}
             Selecionados={aposta.selectedNumbersCount}
             numerosTicket={aposta.selectedNumbers}
